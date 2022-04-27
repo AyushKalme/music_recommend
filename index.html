@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1><strong>Song Recommendation</strong></h1>
+    <div class="transbox">
+        <form action="" name="Song_contents">
+            
+            <label for="songname">Song Name: </label>
+            <input type="text" value="" placeholder="Enter song's name" id="songname" required>
+            <br><br>
+
+            <label for="singer">Choose Singer: </label>
+            <select name="singer" id="singer">
+                <option value="select">--select--</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+
+            <br><br>
+
+            <label for="emotion">Choose type of song: </label>
+            <select name="emotion" id="emotion" required>
+                <option value="select">--select--</option>
+                <option value="sad">Sad</option>
+                <option value="joyful">Joyful</option>
+                <option value="normal">Normal</option>
+            </select>
+
+            <br><br><br><br>
+
+            <input type="submit" value="Submit">
+            
+
+        </form>
+    </div>
+</body>
+</html>
