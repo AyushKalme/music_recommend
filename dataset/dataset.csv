@@ -1,11 +1,26 @@
-no,singer name ,emotion,duration,year,song name ,source
+no,singer_name ,emotion,duration,year,song_name ,source
 1,arijit sighn,sad,5,2017,chhod diya,https://www.youtube.com/watch?v=KMz2pTfRIxw
 2,arijit sighn,sad,6,2017,main dhoone ko,https://www.youtube.com/watch?v=zNj8XNswU-8
 3,arijit sighn,sad,5,2016,jo bheji thi duaa,https://www.youtube.com/watch?v=8FMz_KT1mC4
 4,arijit sighn,happy,5,2016,milne hai mujhse,https://www.youtube.com/watch?v=GtPvCa3vvxA
 5,jubin nautiyal,sad,5,2016,dil lauta do,https://www.youtube.com/watch?v=A_huhqaSLlM
 6,jubin nautiyal,sad,5,2022,dil pe zakham ,https://www.youtube.com/watch?v=gehOkL9r90s
-7,jubin nautiyal,happy,5,2022,mast nazron se,https://www.youtube.com/watch?v=Tc8kb5HBNrA
-8,jubin nautiyal,happy,5,2021,khushi jab bhi teri,https://www.youtube.com/watch?v=c7mWC6CN7kY
+7,jubin nautiyal,happy ,5,2022,mast nazron se,https://www.youtube.com/watch?v=Tc8kb5HBNrA
+8,jubin nautiyal,happy ,5,2021,khushi jab bhi teri,https://www.youtube.com/watch?v=c7mWC6CN7kY
 9,lata mangeshkar,sad,6,1985,dhushman na kare ,https://www.youtube.com/watch?v=3t3NTXGXyPA
 10,lata mangeshkar,happy,5,1991,jab se mile naina,https://www.youtube.com/watch?v=If9B0RsP12s
+11,jubin nautiyal,happy,5,2021,dil galti,https://www.youtube.com/watch?v=1--qqQrimMA
+12,jubin nautiyal,sad,5,2022,lut gaye,https://www.youtube.com/watch?v=sCbbMZ-q4-I
+13,jubin nautiyal,happy,6,2019,raataan,https://www.youtube.com/watch?v=gvyUuxdRdR4
+14,jubin nautiyal,happy,5,2020,meri jindgi hai tu,https://www.youtube.com/watch?v=VYslt8bc-4Q
+15,jubin nautiyal,sad,6,2020,kuch bate,https://www.youtube.com/watch?v=3fpP2dM02tM
+16,jubin nautiyal,sad,5,2020,tumhi aana,https://www.youtube.com/watch?v=tLqtnGLfm4Q
+17,jubin nautiyal,happy,6,2020,tumh pyar ,https://www.youtube.com/watch?v=LZ-Qn4q3sbU
+18,arijit sighn,happy,6,2020,shayad,https://www.youtube.com/watch?v=MJyKN-8UncM
+19,arijit sighn,sad,7,2022,dhoka,https://www.youtube.com/watch?v=2JBYnvUlAEc
+20,arijit sighn,happy,5,2020,jan nisar,https://www.youtube.com/watch?v=vdbP_3o73qI
+21,arijit sighn,happy,6,2019,karam khuda,https://www.youtube.com/watch?v=OgfMsFZyPMM
+22,arijit sighn,happy,5,2020,desh,https://www.youtube.com/watch?v=I0-IiiVgvyU
+23,lata mangeshkar,happy,6,1978,lag ja gale,https://www.youtube.com/watch?v=TFr6G5zveS8
+24,lata mangeshkar,happy,6,1998,zihar re,https://www.youtube.com/watch?v=QYiTtuwJzTQ
+25,lata mangeshkar,sad,5,1997,yeh dharti,https://www.youtube.com/watch?v=HrRibquBe5E

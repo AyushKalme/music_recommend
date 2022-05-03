@@ -8,25 +8,32 @@
     <link rel="stylesheet" href="styles.css">
 
 
-    <!-- <script LANGUAGE="JavaScript" type="text/javascript">
-        function display() {
-          DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=300,height=200')
-          message = "<ul><li><b> Song Name </b>" + document.Song_contents.song_name.value;
-          message += "<li><b> Singer: </b>" + document.Song_contents.singer.value;
-          message += "<li><b> Emotion: </b>" + document.Song_contents.emotion.value + "</ul>";
-          DispWin.document.write(message);
+    <script>
+        function getData()
+        {
+            //gettting the values
+            var songname = document.getElementById("songname").value;
+            var singer= document.getElementById("singer").value; 
+            var emotion= document.getElementById("emotion").value; 
+            //saving the values in local storage
+            localStorage.setItem("txtValue", songname);
+            localStorage.setItem("txtValue1", singer);
+            localStorage.setItem("txtValue3", emotion);
+
+            localStorage.setItem()
+        
         }
-    </script> -->
+    </script>
 
 
 </head>
 <body>
     <h1><strong>Song Recommendation</strong></h1>
     <div class="transbox">
-        <form action="" name="Song_contents">
+        <form action="display.html" name="Song_contents">
             
             <label for="songname">Song Name: </label>
-            <input type="text" value="" name="song_name" placeholder="Enter song's name" id="songname">
+            <input type="text" value="" name="songname" placeholder="Enter song's name" id="songname">
             <br><br>
 
             <label for="singer">Choose Singer: </label>
@@ -50,7 +57,7 @@
 
             <br><br><br><br>
 
-            <input type="submit" value="Submit" onclick="">
+            <input type="submit" value="Submit" onclick="getData()">
             
 
         </form>

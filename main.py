@@ -8,12 +8,12 @@ import emotion
 df = pd.read_csv(r'D:\Internship\git\music_recommend\dataset\dataset.csv')
 print(df.columns)
 
-val = df["singer name "].value_counts()
-print(val)
+# val = df["singer name "].value_counts()
+# print(val)
 
-expression = 'sad'
-emotion.emotions(expression)
-
+# expression = 'sad'
+# emotion.emotions(expression)
+print(df)
 #     print(type(df))
 #         output:<class 'pandas.core.frame.DataFrame'>
 #     print(len(df))
