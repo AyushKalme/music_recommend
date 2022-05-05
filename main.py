@@ -2,24 +2,6 @@ import pandas as pd
 import emotion
 
 
-#!C:\Python27\python.exe
-# Import modules for CGI handling
-import cgi, cgitb
-# Create instance of FieldStorage
-form = cgi.FieldStorage()
-# Get data from fields
-singer = form.getvalue('singer')
-emotion= form.getvalue('emotion')
-print("Content-type:text/html")
-print
-print("")
-print("")
-print("Hello - Second CGI Program")
-print("")
-print("")
-print("Hello %s %s" % (singer, emotion))
-print("")
-print("")
 
 
 
@@ -39,11 +21,10 @@ print("")
 
 
 
-
-
-
-# df = pd.read_csv(r'D:\Internship\git\music_recommend\dataset\dataset.csv')
-# print(df.columns)
+df = pd.read_csv(r'D:\Internship\git\music_recommend\dataset\dataset.csv')
+print(df.columns)
+val = df["singer_name"].value_counts
+print(val)
 
 # val = df["singer name "].value_counts()
 # print(val)
