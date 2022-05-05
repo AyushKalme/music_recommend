@@ -6,31 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Recommendation</title>
     <link rel="stylesheet" href="styles.css">
+    <script language="Javascript">
+        function download(filename, text) {
+            var pom = document.createElement('a');
+            pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + 
 
+            encodeURIComponent(text));
+            pom.setAttribute('download', filename);
 
-    <script>
-        function getData()
-        {
-            //gettting the values
-            var songname = document.getElementById("songname").value;
-            var singer= document.getElementById("singer").value; 
-            var emotion= document.getElementById("emotion").value; 
-            //saving the values in local storage
-            localStorage.setItem("txtValue", songname);
-            localStorage.setItem("txtValue1", singer);
-            localStorage.setItem("txtValue3", emotion);
+            pom.style.display = 'none';
+            document.body.appendChild(pom);
 
-            localStorage.setItem()
-        
+            pom.click();
+
+            document.body.removeChild(pom);
         }
     </script>
-
+    
 
 </head>
 <body>
     <h1><strong>Song Recommendation</strong></h1>
     <div class="transbox">
-        <form action="display.html" name="Song_contents">
+        
+        <form action="display.html" name="Song_contents" id="contents" onsubmit="download(this['name'].value, this['text'].value)">
             
             <label for="songname">Song Name: </label>
             <input type="text" value="" name="songname" placeholder="Enter song's name" id="songname">
@@ -57,10 +56,9 @@
 
             <br><br><br><br>
 
-            <input type="submit" value="Submit" onclick="getData()">
-            
-
+            <input type="submit" value="submit" onclick="getData()" id="submit">
         </form>
+        
     </div>
 </body>
 </html>

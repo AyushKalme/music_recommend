@@ -1,0 +1,34 @@
+<script>
+        const myForm = document
+            .querySelector("#my-form");
+  
+        const submitForm = document
+            .querySelector("#submit-form");
+  
+        submitForm.addEventListener("click", () => {
+  
+            // Creating element to download pdf
+            var element = document.createElement('a');
+  
+            // Setting the path to the pdf file
+            element.href = 'GFG.pdf';
+  
+            // Name to display as download
+            element.download = 'GFG.pdf';
+  
+            // Adding element to the body
+            document.documentElement.appendChild(element);
+  
+            // Above code is equivalent to
+            // <a href="path to file" download="download name"/>
+  
+            // Trigger the file download
+            element.click();
+  
+            // Remove the element from the body
+            document.documentElement.remove(element);
+  
+            // Submit event, to submit the form
+            myForm.submit();
+        });
+    </script>

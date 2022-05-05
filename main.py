@@ -1,19 +1,56 @@
-from turtle import shape
-from bs4 import BeautifulSoup
 import pandas as pd
 import emotion
 
 
+#!C:\Python27\python.exe
+# Import modules for CGI handling
+import cgi, cgitb
+# Create instance of FieldStorage
+form = cgi.FieldStorage()
+# Get data from fields
+singer = form.getvalue('singer')
+emotion= form.getvalue('emotion')
+print("Content-type:text/html")
+print
+print("")
+print("")
+print("Hello - Second CGI Program")
+print("")
+print("")
+print("Hello %s %s" % (singer, emotion))
+print("")
+print("")
 
-df = pd.read_csv(r'D:\Internship\git\music_recommend\dataset\dataset.csv')
-print(df.columns)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# df = pd.read_csv(r'D:\Internship\git\music_recommend\dataset\dataset.csv')
+# print(df.columns)
 
 # val = df["singer name "].value_counts()
 # print(val)
 
 # expression = 'sad'
 # emotion.emotions(expression)
-print(df)
+# print(df)
 #     print(type(df))
 #         output:<class 'pandas.core.frame.DataFrame'>
 #     print(len(df))
