@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
     document.getElementById('display_songname').innerHTML = songname;
     document.getElementById('display_singer').innerHTML = singer;
     document.getElementById('display_emotion').innerHTML = emotion;
-
+    alert('input recieved')
 
 })
 
