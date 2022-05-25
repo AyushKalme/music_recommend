@@ -47,7 +47,7 @@
             <br><br><br><br>
 
             
-            <input pys-onClick="sub" type="submit" value="submit" onclick="" id="submit">
+            <input pys-onClick="sub" type="submit" value="submit" id="submit" onclick="">
         </form>
     </div>
     <h2>Results:</h2>
@@ -55,6 +55,7 @@
     <py-script output="searchbox">
         def sub(*args,**kwargs):
             import pandas as pd
+            
             from pyodide.http import open_url
             df = pd.read_csv(open_url("https://raw.githubusercontent.com/AyushKalme/music_recommend/main/dataset/dataset.csv")) 
             csv = Element('searchbox')
@@ -62,7 +63,7 @@
 
             inputs = Element('singer').value
             emo = Element('emotion').value
-
+            df.drop('no', inplace = True, axis = 1)
             if (inputs == 'arijit sighn' and emo == 'select'):
                 data = df.where(df.singer_name  == 'arijit sighn')
                 final_arijit = data.dropna()
@@ -134,43 +135,8 @@
             else:
                 print("wrong singer or emotion")
 
-
-
     </py-script>
     </div>
 
 </body>
 </html>
-
-
-
-
-
-
-<!-- <html>
-    <head>
-      <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-      <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-      <py-env>
-        - pandas
-      </py-env>
-    </head>
-
-  <body>
-    <h1>test</h1>
-    <div id="result">
-        <p id="csv"></p>
-    </div>
-    <py-script output="result">
-        import pandas as pd
-        from pyodide.http import open_url
-        df = pd.read_csv(open_url("https://raw.githubusercontent.com/AyushKalme/music_recommend/main/dataset/dataset.csv")) 
-        csv = Element('csv')
-        csv.write(df.head())
-        
-        data = df.where(df.singer_name  == 'arijit sighn')
-        final_arijit = data.dropna()
-        csv.write(final_arijit)
-    </py-script>
-  </body>
-</html> -->
