@@ -5,37 +5,11 @@ def arijit_sighn_sad ():
     arijit_sighn_sadlist = []
     
 
-    
-    for i in range(len(df.no)):
-        if 'arijit sighn' == df.singer_name[i]:
-            arijit_sighn_sadlist.append(i)
-
-    data = pd.DataFrame()
-
-    for indexes in arijit_sighn_sadlist:
-        data = data.append(df.iloc[indexes])
-        # data = pd.concat(df.iloc[indexes])
-
-    
 
     data = df.where(df.singer_name  == 'arijit sighn')
     final_arijitsad = data.dropna()
     df1 = final_arijitsad
-    arigitsad_list = []
     
-    
-    for i in range(len(arigitsad_list)):
-        if 'sad' == df1.emotion[i]:
-            arigitsad_list.append(i)
-
-    data = pd.DataFrame()
-
-    for indexes in arigitsad_list:
-        data = data.append(df1.iloc[indexes])
-        # data = pd.concat(df.iloc[indexes])
-
-    
-
     data = df.where(df1.emotion == 'sad')
     final_sad_arigit = data.dropna()
     print(final_sad_arigit)

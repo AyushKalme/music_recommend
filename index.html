@@ -1,27 +1,17 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Recommendation</title>
+    
+    
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <script language="Javascript">
-        function download(filename, text) {
-            var pom = document.createElement('a');
-            pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + 
-
-            encodeURIComponent(text));
-            pom.setAttribute('download', filename);
-
-            pom.style.display = 'none';
-            document.body.appendChild(pom);
-
-            pom.click();
-
-            document.body.removeChild(pom);
-        }
-    </script>
+    <py-env>
+        - pandas
+    </py-env>
     
 
 </head>
@@ -29,7 +19,7 @@
     <h1><strong>Song Recommendation</strong></h1>
     <div class="transbox">
         
-        <form action="display.html" name="Song_contents" id="contents" onsubmit="download(this['name'].value, this['text'].value)">
+        <form action="" name="Song_contents" id="contents" onsubmit="return false">
             
             <label for="songname">Song Name: </label>
             <input type="text" value="" name="songname" placeholder="Enter song's name" id="songname">
@@ -56,19 +46,108 @@
 
             <br><br><br><br>
 
-            <input type="submit" value="submit" onclick="getData()" id="submit">
+            
+            <input pys-onClick="sub" type="submit" value="submit" onclick="" id="submit">
         </form>
-        
     </div>
+    <h2>Results:</h2>
+    <div id="searchbox" class="searchbox">
+    <py-script output="searchbox">
+        def sub(*args,**kwargs):
+            import pandas as pd
+            from pyodide.http import open_url
+            df = pd.read_csv(open_url("https://raw.githubusercontent.com/AyushKalme/music_recommend/main/dataset/dataset.csv")) 
+            csv = Element('searchbox')
+            <!-- csv.write(df.head()) -->
+
+            inputs = Element('singer').value
+            emo = Element('emotion').value
+
+            if (inputs == 'arijit sighn' and emo == 'select'):
+                data = df.where(df.singer_name  == 'arijit sighn')
+                final_arijit = data.dropna()
+                csv.write(final_arijit)
+            elif (inputs == 'lata mangeshkar' and emo == 'select'):
+                data = df.where(df.singer_name  == 'lata mangeshkar')
+                singer = data.dropna()
+                csv.write(singer)
+            elif (inputs == 'jubin nautiyal' and emo == 'select'):
+                data = df.where(df.singer_name  == 'jubin nautiyal')
+                singer = data.dropna()
+                csv.write(singer)
+            elif (inputs == 'select' and emo == 'sad'):
+                data = df.where(df.emotion == 'sad')
+                emotion = data.dropna()
+                csv.write(emotion)
+            elif (inputs == 'select' and emo == 'happy'):
+                data = df.where(df.emotion == 'happy')
+                emotion = data.dropna()
+                csv.write(emotion)
+            elif (inputs == 'arijit sighn' and emo == 'sad'):
+                data = df.where(df.singer_name  == 'arijit sighn')
+                final_arijitsad = data.dropna()
+                df1 = final_arijitsad
+                
+                data = df.where(df1.emotion == 'sad')
+                final_sad_arigit = data.dropna()
+                csv.write(final_sad_arigit)
+            elif (inputs == 'arijit sighn' and emo == 'happy'):
+                data = df.where(df.singer_name  == 'arijit sighn')
+                final_arijitsad = data.dropna()
+                df1 = final_arijitsad
+                
+                data = df.where(df1.emotion == 'happy')
+                final_happy_arigit = data.dropna()
+                csv.write(final_happy_arigit)
+            elif (inputs == 'lata mangeshkar' and emo == 'sad'):
+                data = df.where(df.singer_name  == 'lata mangeshkar')
+                final_latasad = data.dropna()
+                df1 = final_latasad
+                
+                data = df.where(df1.emotion == 'sad')
+                final_sad_lata = data.dropna()
+                csv.write(final_sad_lata)
+            elif (inputs == 'jubin nautiyal' and emo == 'sad'):
+                data = df.where(df.singer_name  == 'jubin nautiyal')
+                final_jubsad = data.dropna()
+                df1 = final_jubsad
+                
+                data = df.where(df1.emotion == 'sad')
+                final_sad_jub = data.dropna()
+                csv.write(final_sad_jub)
+            elif (inputs == 'jubin nautiyal' and emo == 'happy'):
+                data = df.where(df.singer_name  == 'jubin nautiyal')
+                final_jubhappy = data.dropna()
+                df1 = final_jubhappy
+                
+                data = df.where(df1.emotion == 'happy')
+                final_happy_jub = data.dropna()
+                csv.write(final_happy_jub)
+            elif (inputs == 'lata mangeshkar' and emo == 'happy'):
+                data = df.where(df.singer_name  == 'lata mangeshkar')
+                final_lata = data.dropna()
+                df1 = final_lata
+                
+                data = df.where(df1.emotion == 'happy')
+                final_happy_lata = data.dropna()
+                csv.write(final_happy_lata)
+            else:
+                print("wrong singer or emotion")
+
+
+
+    </py-script>
+    </div>
+
 </body>
-</html> -->
+</html>
 
 
 
 
 
 
-<html>
+<!-- <html>
     <head>
       <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
       <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
@@ -94,4 +173,4 @@
         csv.write(final_arijit)
     </py-script>
   </body>
-</html>
+</html> -->
