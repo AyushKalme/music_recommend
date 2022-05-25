@@ -6,19 +6,19 @@ df = pd.read_csv(r'D:\Internship\git\music_recommend\dataset\dataset.csv')
 
 
 def arijit_sighn ():
-    arijit_sighn_list = []
+    # arijit_sighn_list = []
     
 
     
-    for i in range(len(df.no)):
-        if 'arijit sighn' == df.singer_name[i]:
-            arijit_sighn_list.append(i)
+    # for i in range(len(df.no)):
+    #     if 'arijit sighn' == df.singer_name[i]:
+    #         arijit_sighn_list.append(i)
 
-    data = pd.DataFrame()
+    # data = pd.DataFrame()
 
-    for indexes in arijit_sighn_list:
-        data = data.append(df.iloc[indexes])
-        # data = pd.concat(df.iloc[indexes])
+    # for indexes in arijit_sighn_list:
+    #     data = data.append(df.iloc[indexes])
+    #     # data = pd.concat(df.iloc[indexes])
 
     
 
@@ -27,18 +27,18 @@ def arijit_sighn ():
     print(final_arijit)
 
 def lata_mangeshkar ():
-    lata_mangeshkar_list = []
+    # lata_mangeshkar_list = []
     
     
-    for i in range(len(df.no)):
-        if 'lata mangeshkar' == df.singer_name[i]:
-            lata_mangeshkar_list.append(i)
+    # for i in range(len(df.no)):
+    #     if 'lata mangeshkar' == df.singer_name[i]:
+    #         lata_mangeshkar_list.append(i)
 
-    data = pd.DataFrame()
+    # data = pd.DataFrame()
 
-    for indexes in lata_mangeshkar_list:
-        data = data.append(df.iloc[indexes])
-        # data = pd.concat(df.iloc[indexes])
+    # for indexes in lata_mangeshkar_list:
+    #     data = data.append(df.iloc[indexes])
+    #     # data = pd.concat(df.iloc[indexes])
 
     
 
@@ -47,19 +47,19 @@ def lata_mangeshkar ():
     print(final_lata)
 
 def jubin_nautiyal ():
-    jubin_nautiyal_list = []
-    jubin_nautiyal_sadlist = []
+    # jubin_nautiyal_list = []
+    # jubin_nautiyal_sadlist = []
     
     
-    for i in range(len(df.no)):
-        if 'jubin nautiyal' == df.singer_name[i]:
-            jubin_nautiyal_list.append(i)
+    # for i in range(len(df.no)):
+    #     if 'jubin nautiyal' == df.singer_name[i]:
+    #         jubin_nautiyal_list.append(i)
     
-    data = pd.DataFrame()
+    # data = pd.DataFrame()
 
-    for indexes in jubin_nautiyal_list:
-        data = data.append(df.iloc[indexes])
-        # data = pd.concat(df.iloc[indexes])
+    # for indexes in jubin_nautiyal_list:
+    #     data = data.append(df.iloc[indexes])
+    #     # data = pd.concat(df.iloc[indexes])
 
     
 
@@ -70,6 +70,6 @@ def jubin_nautiyal ():
 
 
 
-jubin_nautiyal()
+# jubin_nautiyal()
 arijit_sighn()
-lata_mangeshkar()
+# lata_mangeshkar()

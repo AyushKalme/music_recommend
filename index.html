@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,7 +41,7 @@
                 <option value="arijit sighn">arijit sighn</option>
                 <option value="jubin nautiyal">jubin nautiyal</option>
                 <option value="lata mangeshkar">lata mangeshkar</option>
-                <!-- <option value=""></option> -->
+                
             </select>
 
             <br><br>
@@ -50,7 +50,7 @@
             <select name="emotion" id="emotion" required>
                 <option value="select">--select--</option>
                 <option value="sad">Sad</option>
-                <!-- <option value="joyful">Joyful</option> -->
+                
                 <option value="happy">happy</option>
             </select>
 
@@ -61,4 +61,37 @@
         
     </div>
 </body>
+</html> -->
+
+
+
+
+
+
+<html>
+    <head>
+      <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+      <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+      <py-env>
+        - pandas
+      </py-env>
+    </head>
+
+  <body>
+    <h1>test</h1>
+    <div id="result">
+        <p id="csv"></p>
+    </div>
+    <py-script output="result">
+        import pandas as pd
+        from pyodide.http import open_url
+        df = pd.read_csv(open_url("https://raw.githubusercontent.com/AyushKalme/music_recommend/main/dataset/dataset.csv")) 
+        csv = Element('csv')
+        csv.write(df.head())
+        
+        data = df.where(df.singer_name  == 'arijit sighn')
+        final_arijit = data.dropna()
+        csv.write(final_arijit)
+    </py-script>
+  </body>
 </html>
